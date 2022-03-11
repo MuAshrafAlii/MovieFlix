@@ -38,8 +38,30 @@
 }
 
 #header > nav button p {
-  font-size: 1.2rem;
-  font-weight: 100;
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+@media (max-width: 750px) {
+  #header > nav button {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #header > nav button {
+    font-size: 0.5rem;
+  }
+
+  #header > nav button p {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 400px) {
+  #header > nav img {
+    width: 40%;
+  }
 }
 
 #header > div {
@@ -83,22 +105,72 @@
   text-align: center;
 }
 
+@media (max-width: 830px) {
+  #header > div h1 {
+    font-size: 3rem;
+  }
+  #header > div h2 {
+    font-size: 2.5rem;
+  }
+
+  #header > div > p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 635px) {
+  #header > div h1 {
+    font-size: 2.5rem;
+  }
+  #header > div h2 {
+    font-size: 2rem;
+  }
+
+  #header > div > p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #header > div h1 {
+    font-size: 2rem;
+  }
+  #header > div h2 {
+    font-size: 1.5rem;
+  }
+
+  #header > div > p {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 350px) {
+  #header > div h1 {
+    font-size: 1.5rem;
+  }
+  #header > div h2 {
+    font-size: 1.3rem;
+  }
+}
+
 #header .formContainer .inputContainer {
   width: fit-content;
+  height: 10vh;
   margin: 0 auto;
   position: relative;
+  display: flex;
 }
 
 #header .formContainer .inputContainer input {
   position: relative;
-  width: 60vw;
-  height: 3vh;
+  width: 40vw;
+  height: 100%;
   font-size: 1.2rem;
   padding: 1.8em 1em 1em;
   color: #000;
   border: none;
   outline: none;
-  border-radius: 0.3em;
+  border-radius: 0.3em 0 0 0.3em;
 }
 
 #header .formContainer .inputContainer input:focus {
@@ -124,16 +196,57 @@
 }
 
 #header .formContainer .inputContainer button {
-  position: absolute;
-  top: 0px;
-  right: 0px;
   height: 100%;
-  width: 10vw;
+  width: 15vw;
   font-size: 1.2rem;
   border-radius: 0em 0.3em 0.3em 0;
 }
 
 #header .formContainer .inputContainer button p {
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 300;
+}
+
+@media (max-width: 900px) {
+  #header .formContainer .inputContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+  }
+
+  #header .formContainer .inputContainer input {
+    border-radius: 0.3em;
+    margin-bottom: 0.5em;
+    height: 5vh;
+    width: 60vw;
+  }
+
+  #header .formContainer .inputContainer button {
+    border-radius: 0.3em;
+    height: 5vh;
+    width: 30vw;
+  }
+
+  #header .formContainer .inputContainer label {
+    top: 13%;
+  }
+}
+
+@media (max-width: 480px) {
+  #header .formContainer .inputContainer input {
+    font-size: 1rem;
+  }
+
+  #header .formContainer .inputContainer button p {
+    font-size: 0.7rem;
+  }
+
+  #header .formContainer .inputContainer label {
+    font-size: 1rem;
+  }
+
+  #header .formContainer .inputContainer input:focus ~ label {
+    font-size: 0.6rem;
+  }
 }
