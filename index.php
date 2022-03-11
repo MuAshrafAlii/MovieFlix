@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./assets/imgs/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/landingPage.css">
+    <script src="./assets/js/landingPage.js" defer></script>
     <title>Welcome To MovieFlix</title>
 </head>
 <body>
-    <h1>Welcome To MovieFlix</h1>
+    <?php require_once("./assets/html/landingPage.html"); ?>
 </body>
 </html>

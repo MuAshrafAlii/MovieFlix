@@ -1,0 +1,77 @@
+/* Fonts */
+@font-face {
+  font-family: "Netflix Sans";
+  src: url("../fonts/NetflixSans-Thin.otf");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Netflix Sans";
+  src: url("../fonts/NetflixSans-Light.otf");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Netflix Sans";
+  src: url("../fonts/NetflixSans-Regular.otf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Netflix Sans";
+  src: url("../fonts/NetflixSans-Medium.otf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Netflix Sans";
+  src: url("../fonts/NetflixSans-Bold.otf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Netflix Sans";
+  src: url("../fonts/NetflixSans-Black.otf");
+  font-weight: 600;
+}
+
+/* Fonts */
+
+*,
+html {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Netflix Sans", Helvetica, sans-serif;
+  font-weight: 100;
+  --primaryColor: #e50914;
+  --secondaryColor: #d92028;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+button {
+  background-color: var(--primaryColor);
+  border: none;
+  outline: none;
+  transition: color 0.2s;
+}
+
+button p {
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  font-weight: 100;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:active {
+  background-color: var(--secondaryColor);
+  transition: color 0.2s;
+}
+
+button:active p {
+  transform: scale(0.9);
+  transition: transform 0.2s;
+}
