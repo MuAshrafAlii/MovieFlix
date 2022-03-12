@@ -1,5 +1,6 @@
 @import url("./common.css");
 
+/* Commons */
 * {
   color: #fff;
 }
@@ -7,6 +8,113 @@
 body {
   background-color: #101010;
 }
+
+/* Email CSS */
+
+.formContainer .inputContainer {
+  width: fit-content;
+  height: 10vh;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+}
+
+.formContainer .inputContainer input {
+  position: relative;
+  width: 40vw;
+  height: 100%;
+  font-size: 1.2rem;
+  padding: 1.8em 1em 1em;
+  color: #000;
+  border: none;
+  outline: none;
+  border-radius: 0.3em 0 0 0.3em;
+}
+
+.formContainer .inputContainer input:focus {
+  outline: 1px #002727 solid;
+  border: none;
+}
+
+.formContainer .inputContainer label {
+  position: absolute;
+  left: 10px;
+  top: 25%;
+  color: black;
+  font-size: 1.2rem;
+  transition: transform 0.2s, color 0.2s, font-weight 0.2s, font-size 0.2s;
+}
+
+.formContainer .inputContainer input:focus ~ label {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: gray;
+  transform: translateY(-75%);
+  transition: transform 0.2s, color 0.2s, font-weight 0.2s, font-size 0.2s;
+}
+
+.formContainer .inputContainer button {
+  height: 100%;
+  width: 15vw;
+  font-size: 1.2rem;
+  border-radius: 0em 0.3em 0.3em 0;
+  border: 1px solid black;
+}
+
+.formContainer .inputContainer button p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+@media (max-width: 900px) {
+  .formContainer .inputContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+  }
+
+  .formContainer .inputContainer input {
+    border-radius: 0.3em;
+    margin-bottom: 0.5em;
+    height: 5vh;
+    width: 60vw;
+  }
+
+  .formContainer .inputContainer button {
+    border-radius: 0.3em;
+    height: 10vh;
+    width: 30vw;
+  }
+
+  .formContainer .inputContainer label {
+    top: 13%;
+  }
+}
+
+@media (max-width: 480px) {
+  .formContainer .inputContainer input {
+    font-size: 0.8rem;
+  }
+
+  .formContainer .inputContainer button {
+    height: 7vh;
+  }
+
+  .formContainer .inputContainer button p {
+    font-size: 0.7rem;
+  }
+
+  .formContainer .inputContainer label {
+    font-size: 0.8rem;
+  }
+
+  .formContainer .inputContainer input:focus ~ label {
+    font-size: 0.6rem;
+  }
+}
+
+/* Commons */
 
 /* Header Starts Here */
 
@@ -106,11 +214,6 @@ body {
   text-shadow: 1px 1px 1px #000;
 }
 
-#header > div > .formContainer {
-  width: 100%;
-  text-align: center;
-}
-
 @media (max-width: 830px) {
   #header > div h1 {
     font-size: 3rem;
@@ -156,109 +259,6 @@ body {
   }
   #header > div h2 {
     font-size: 1.3rem;
-  }
-}
-
-#header .formContainer .inputContainer {
-  width: fit-content;
-  height: 10vh;
-  margin: 0 auto;
-  position: relative;
-  display: flex;
-}
-
-#header .formContainer .inputContainer input {
-  position: relative;
-  width: 40vw;
-  height: 100%;
-  font-size: 1.2rem;
-  padding: 1.8em 1em 1em;
-  color: #000;
-  border: none;
-  outline: none;
-  border-radius: 0.3em 0 0 0.3em;
-}
-
-#header .formContainer .inputContainer input:focus {
-  outline: 1px #002727 solid;
-  border: none;
-}
-
-#header .formContainer .inputContainer label {
-  position: absolute;
-  left: 10px;
-  top: 25%;
-  color: black;
-  font-size: 1.2rem;
-  transition: transform 0.2s, color 0.2s, font-weight 0.2s, font-size 0.2s;
-}
-
-#header .formContainer .inputContainer input:focus ~ label {
-  font-size: 0.8rem;
-  font-weight: 400;
-  color: gray;
-  transform: translateY(-75%);
-  transition: transform 0.2s, color 0.2s, font-weight 0.2s, font-size 0.2s;
-}
-
-#header .formContainer .inputContainer button {
-  height: 100%;
-  width: 15vw;
-  font-size: 1.2rem;
-  border-radius: 0em 0.3em 0.3em 0;
-  border: 1px solid black;
-}
-
-#header .formContainer .inputContainer button p {
-  font-size: 1rem;
-  font-weight: 300;
-}
-
-@media (max-width: 900px) {
-  #header .formContainer .inputContainer {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: fit-content;
-  }
-
-  #header .formContainer .inputContainer input {
-    border-radius: 0.3em;
-    margin-bottom: 0.5em;
-    height: 5vh;
-    width: 60vw;
-  }
-
-  #header .formContainer .inputContainer button {
-    border-radius: 0.3em;
-    height: 10vh;
-    width: 30vw;
-  }
-
-  #header .formContainer .inputContainer label {
-    top: 13%;
-  }
-}
-
-@media (max-width: 480px) {
-  #header .formContainer .inputContainer input {
-    font-size: 0.8rem;
-  }
-
-  #header .formContainer .inputContainer button {
-    height: 7vh;
-  }
-
-  #header .formContainer .inputContainer button p {
-    font-size: 0.7rem;
-  }
-
-  #header .formContainer .inputContainer label {
-    font-size: 0.8rem;
-  }
-
-  #header .formContainer .inputContainer input:focus ~ label {
-    font-size: 0.6rem;
   }
 }
 
@@ -665,107 +665,52 @@ body {
   font-weight: 200;
 }
 
+#faq .faqHeader p:nth-child(2) {
+  transform: rotate(90deg);
+  transition: transform 0.3s;
+}
+
+#faq .faqContainer.open .faqHeader p:nth-child(2) {
+  transform: rotate(0deg);
+  transition: transform 0.3s;
+}
+
 #faq .faqContent {
   padding: 1.3em;
   font-size: 1.2rem;
   font-weight: 200rem;
   background-color: #303030;
   border-top: 1px black solid;
-  display: none;
-  line-height: 1.5em;
+  height: fit-content;
+  overflow: hidden;
+  transition: height 0.3s;
 }
 
-#faq .faqContainer.open .faqContent {
-  display: block;
+#faq .faqContainer .contentContainer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s;
 }
+
+#faq .faqContainer.open .contentContainer {
+  max-height: 1200px;
+  transition: max-height 0.25s;
+}
+
+/* #faq .faqContainer.open .faqContent {
+  
+  height: 66vh;
+  transition: height 0.3s;
+} */
 
 #faq h2 {
   margin: 1em 0em 0.5em;
   text-align: center;
 }
 
-#faq .formContainer .inputContainer {
-  width: fit-content;
-  height: 10vh;
-  margin: 0 auto;
-  position: relative;
-  display: flex;
-}
-
-#faq .formContainer .inputContainer input {
-  position: relative;
-  width: 40vw;
-  height: 100%;
-  font-size: 1.2rem;
-  padding: 1.8em 1em 1em;
-  color: #000;
-  border: none;
-  outline: none;
-  border-radius: 0.3em 0 0 0.3em;
-}
-
-#faq .formContainer .inputContainer input:focus {
-  outline: 1px #002727 solid;
-  border: none;
-}
-
-#faq .formContainer .inputContainer label {
-  position: absolute;
-  left: 10px;
-  top: 25%;
-  color: black;
-  font-size: 1.2rem;
-  transition: transform 0.2s, color 0.2s, font-weight 0.2s, font-size 0.2s;
-}
-
-#faq .formContainer .inputContainer input:focus ~ label {
-  font-size: 0.8rem;
-  font-weight: 400;
-  color: gray;
-  transform: translateY(-75%);
-  transition: transform 0.2s, color 0.2s, font-weight 0.2s, font-size 0.2s;
-}
-
-#faq .formContainer .inputContainer button {
-  height: 100%;
-  width: 15vw;
-  font-size: 1.2rem;
-  border-radius: 0em 0.3em 0.3em 0;
-  border: 1px solid black;
-}
-
-#faq .formContainer .inputContainer button p {
-  font-size: 1rem;
-  font-weight: 300;
-}
-
 @media (max-width: 900px) {
   #faq h2 {
     font-size: 1rem;
-  }
-
-  #faq .formContainer .inputContainer {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: fit-content;
-  }
-
-  #faq .formContainer .inputContainer input {
-    border-radius: 0.3em;
-    margin-bottom: 0.5em;
-    height: 5vh;
-    width: 60vw;
-  }
-
-  #faq .formContainer .inputContainer button {
-    border-radius: 0.3em;
-    height: 10vh;
-    width: 30vw;
-  }
-
-  #faq .formContainer .inputContainer label {
-    top: 13%;
   }
 }
 
@@ -802,26 +747,6 @@ body {
   }
 
   #faq h2 {
-    font-size: 0.6rem;
-  }
-
-  #faq .formContainer .inputContainer input {
-    font-size: 0.8rem;
-  }
-
-  #faq .formContainer .inputContainer button {
-    height: 7vh;
-  }
-
-  #faq .formContainer .inputContainer button p {
-    font-size: 0.7rem;
-  }
-
-  #faq .formContainer .inputContainer label {
-    font-size: 0.8rem;
-  }
-
-  #faq .formContainer .inputContainer input:focus ~ label {
     font-size: 0.6rem;
   }
 }
