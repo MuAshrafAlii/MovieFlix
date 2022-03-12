@@ -4,6 +4,12 @@
   color: #fff;
 }
 
+body {
+  background-color: #101010;
+}
+
+/* Header Starts Here */
+
 #header {
   width: 100%;
   height: 100vh;
@@ -27,7 +33,7 @@
 #header > nav img {
   width: 30%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 #header > nav button {
@@ -200,6 +206,7 @@
   width: 15vw;
   font-size: 1.2rem;
   border-radius: 0em 0.3em 0.3em 0;
+  border: 1px solid black;
 }
 
 #header .formContainer .inputContainer button p {
@@ -224,7 +231,7 @@
 
   #header .formContainer .inputContainer button {
     border-radius: 0.3em;
-    height: 5vh;
+    height: 10vh;
     width: 30vw;
   }
 
@@ -235,7 +242,11 @@
 
 @media (max-width: 480px) {
   #header .formContainer .inputContainer input {
-    font-size: 1rem;
+    font-size: 0.8rem;
+  }
+
+  #header .formContainer .inputContainer button {
+    height: 7vh;
   }
 
   #header .formContainer .inputContainer button p {
@@ -243,10 +254,630 @@
   }
 
   #header .formContainer .inputContainer label {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   #header .formContainer .inputContainer input:focus ~ label {
     font-size: 0.6rem;
+  }
+}
+
+/* Header Ends Here */
+
+/* AnyDeviceSec Starts Here */
+
+#anyDeviceSec {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: #222222 8px solid;
+}
+
+#anyDeviceSec > article {
+  width: 40vw;
+}
+
+#anyDeviceSec > article h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 0.4em;
+}
+
+#anyDeviceSec > article p {
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+#anyDeviceSec img {
+  width: 30%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 1000px) {
+  #anyDeviceSec {
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  #anyDeviceSec > article {
+    width: 80vw;
+    text-align: center;
+  }
+
+  #anyDeviceSec img {
+    width: 80%;
+    height: 60%;
+  }
+}
+
+@media (max-width: 730px) {
+  #anyDeviceSec > article h1 {
+    font-size: 2rem;
+  }
+
+  #anyDeviceSec > article p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 430px) {
+  #anyDeviceSec > article h1 {
+    font-size: 1.5rem;
+  }
+
+  #anyDeviceSec > article p {
+    font-size: 0.75rem;
+  }
+}
+
+/* AnyDeviceSec Ends Here */
+
+/* downloadSec Ends Here */
+
+#downloadSec {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: #222222 8px solid;
+  padding: 2em 0em;
+}
+
+#downloadSec > article {
+  width: 40vw;
+}
+
+#downloadSec > article h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 0.4em;
+}
+
+#downloadSec > article p {
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+#downloadSec > .mobileContainer {
+  position: relative;
+  height: 100%;
+  width: 30vw;
+}
+
+#downloadSec > .mobileContainer img[alt="mobile"] {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+#downloadSec > .mobileContainer > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20%;
+  width: 75%;
+  background-color: #000;
+  border: 3px solid #404040;
+  border-radius: 1em;
+  font-size: 1rem;
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 1.1em;
+}
+
+#downloadSec > .mobileContainer .posterContainer {
+  display: flex;
+  align-items: center;
+}
+
+#downloadSec > .mobileContainer > div img[alt="poster"] {
+  height: 60%;
+  width: 15%;
+  object-fit: contain;
+  margin-right: 10%;
+}
+
+#downloadSec > .mobileContainer .posterContainer p {
+  font-weight: 200;
+  font-size: 1rem;
+}
+
+#downloadSec > .mobileContainer > div img[alt="downloading"] {
+  height: 95%;
+  width: 25%;
+  object-fit: contain;
+}
+
+@media (max-width: 1000px) {
+  #downloadSec {
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  #downloadSec > article {
+    width: 80vw;
+    text-align: center;
+  }
+
+  #downloadSec > .mobileContainer {
+    height: 50%;
+    width: 80vw;
+  }
+
+  #downloadSec > .mobileContainer > div {
+    width: 40%;
+  }
+}
+
+@media (max-width: 730px) {
+  #downloadSec > article h1 {
+    font-size: 2rem;
+  }
+
+  #downloadSec > article p {
+    font-size: 1rem;
+  }
+
+  #downloadSec > .mobileContainer .posterContainer p {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #downloadSec > .mobileContainer > div {
+    width: 50%;
+  }
+}
+
+@media (max-width: 430px) {
+  #downloadSec > article h1 {
+    font-size: 1.5rem;
+  }
+
+  #downloadSec > article p {
+    font-size: 0.75rem;
+  }
+
+  #downloadSec > .mobileContainer .posterContainer p {
+    font-size: 0.5rem;
+  }
+
+  #downloadSec > .mobileContainer > div {
+    width: 70%;
+  }
+}
+
+/* downloadSec Ends Here */
+
+/* watchEverywhereSec Ends Here */
+#watchEverywhereSec {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: #222222 8px solid;
+}
+
+#watchEverywhereSec > article {
+  width: 40vw;
+}
+
+#watchEverywhereSec > article h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 0.4em;
+}
+
+#watchEverywhereSec > article p {
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+#watchEverywhereSec img {
+  width: 30%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 1000px) {
+  #watchEverywhereSec {
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  #watchEverywhereSec > article {
+    width: 80vw;
+    text-align: center;
+  }
+
+  #watchEverywhereSec img {
+    width: 80%;
+    height: 60%;
+  }
+}
+
+@media (max-width: 730px) {
+  #watchEverywhereSec > article h1 {
+    font-size: 2rem;
+  }
+
+  #watchEverywhereSec > article p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 430px) {
+  #watchEverywhereSec > article h1 {
+    font-size: 1.5rem;
+  }
+
+  #watchEverywhereSec > article p {
+    font-size: 0.75rem;
+  }
+}
+
+/* watchEverywhereSec Ends Here */
+
+/* kidsSec Ends Here */
+
+#kidsSec {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row-reverse;
+  border-bottom: #222222 8px solid;
+}
+
+#kidsSec > article {
+  width: 40vw;
+}
+
+#kidsSec > article h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 0.4em;
+}
+
+#kidsSec > article p {
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+#kidsSec img {
+  width: 30%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 1000px) {
+  #kidsSec {
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+  }
+
+  #kidsSec > article {
+    width: 80vw;
+    text-align: center;
+  }
+
+  #kidsSec img {
+    width: 80%;
+    height: 60%;
+  }
+}
+
+@media (max-width: 730px) {
+  #kidsSec > article h1 {
+    font-size: 2rem;
+  }
+
+  #kidsSec > article p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 430px) {
+  #kidsSec > article h1 {
+    font-size: 1.5rem;
+  }
+
+  #kidsSec > article p {
+    font-size: 0.75rem;
+  }
+}
+
+/* kidsSec Ends Here */
+
+/* FAQ Starts Here */
+
+#faq {
+  width: 100%;
+  height: fit-content;
+  min-height: 120vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1rem;
+  padding: 2em 0;
+  border-bottom: #222222 8px solid;
+}
+
+#faq h1 {
+  font-weight: 500;
+  font-size: 3rem;
+  margin-bottom: 0.6em;
+}
+
+#faq > .faqs {
+  width: 60vw;
+}
+
+#faq .faqContainer {
+  margin-bottom: 1em;
+}
+
+#faq .faqHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 12vh;
+  width: 100%;
+  font-size: 1rem;
+  padding: 0em 1em;
+  background-color: #303030;
+  cursor: pointer;
+}
+
+#faq .faqHeader * {
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+#faq .faqContent {
+  padding: 1.3em;
+  font-size: 1.2rem;
+  font-weight: 200rem;
+  background-color: #303030;
+  border-top: 1px black solid;
+  display: none;
+  line-height: 1.5em;
+}
+
+#faq .faqContainer.open .faqContent {
+  display: block;
+}
+
+#faq h2 {
+  margin: 1em 0em 0.5em;
+  text-align: center;
+}
+
+#faq .formContainer .inputContainer {
+  width: fit-content;
+  height: 10vh;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+}
+
+#faq .formContainer .inputContainer input {
+  position: relative;
+  width: 40vw;
+  height: 100%;
+  font-size: 1.2rem;
+  padding: 1.8em 1em 1em;
+  color: #000;
+  border: none;
+  outline: none;
+  border-radius: 0.3em 0 0 0.3em;
+}
+
+#faq .formContainer .inputContainer input:focus {
+  outline: 1px #002727 solid;
+  border: none;
+}
+
+#faq .formContainer .inputContainer label {
+  position: absolute;
+  left: 10px;
+  top: 25%;
+  color: black;
+  font-size: 1.2rem;
+  transition: transform 0.2s, color 0.2s, font-weight 0.2s, font-size 0.2s;
+}
+
+#faq .formContainer .inputContainer input:focus ~ label {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: gray;
+  transform: translateY(-75%);
+  transition: transform 0.2s, color 0.2s, font-weight 0.2s, font-size 0.2s;
+}
+
+#faq .formContainer .inputContainer button {
+  height: 100%;
+  width: 15vw;
+  font-size: 1.2rem;
+  border-radius: 0em 0.3em 0.3em 0;
+  border: 1px solid black;
+}
+
+#faq .formContainer .inputContainer button p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+@media (max-width: 900px) {
+  #faq h2 {
+    font-size: 1rem;
+  }
+
+  #faq .formContainer .inputContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+  }
+
+  #faq .formContainer .inputContainer input {
+    border-radius: 0.3em;
+    margin-bottom: 0.5em;
+    height: 5vh;
+    width: 60vw;
+  }
+
+  #faq .formContainer .inputContainer button {
+    border-radius: 0.3em;
+    height: 10vh;
+    width: 30vw;
+  }
+
+  #faq .formContainer .inputContainer label {
+    top: 13%;
+  }
+}
+
+@media (max-width: 800px) {
+  #faq h1 {
+    font-size: 2.5rem;
+  }
+
+  #faq .faqs {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 600px) {
+  #faq h1 {
+    font-size: 2rem;
+  }
+
+  #faq .faqHeader * {
+    font-size: 1rem;
+  }
+
+  #faq .faqContent {
+    font-size: 1rem;
+  }
+  #faq h2 {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #faq h1 {
+    font-size: 1.4rem;
+  }
+
+  #faq h2 {
+    font-size: 0.6rem;
+  }
+
+  #faq .formContainer .inputContainer input {
+    font-size: 0.8rem;
+  }
+
+  #faq .formContainer .inputContainer button {
+    height: 7vh;
+  }
+
+  #faq .formContainer .inputContainer button p {
+    font-size: 0.7rem;
+  }
+
+  #faq .formContainer .inputContainer label {
+    font-size: 0.8rem;
+  }
+
+  #faq .formContainer .inputContainer input:focus ~ label {
+    font-size: 0.6rem;
+  }
+}
+
+/* FAQ Ends Here */
+
+#footer {
+  width: 100%;
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  padding: 1em 0em;
+}
+
+#footer h1 {
+  font-size: 1rem;
+  font-weight: 100;
+  width: 70%;
+  text-align: left;
+  color: #757575;
+}
+
+#footer nav {
+  border-bottom: 3px solid #242323;
+  width: 70%;
+  font-size: 1rem;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+#footer nav ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#footer ul li {
+  list-style: none;
+  font-size: 0.8rem;
+  margin: 1em;
+  color: #757575;
+}
+
+#footer ul li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#footer span {
+  color: crimson;
+}
+
+@media (max-width: 550px) {
+  #footer nav ul {
+    grid-template-columns: 1fr 1fr;
   }
 }
