@@ -36,6 +36,16 @@ body {
   border: none;
 }
 
+.formContainer .inputContainer .error {
+  position: absolute;
+  color: #ffa91e;
+  text-shadow: 2px 2px 1px #000;
+  font-weight: 300;
+  font-size: 1rem;
+  left: 0.5em;
+  bottom: -1.5em;
+}
+
 .formContainer .inputContainer label {
   position: absolute;
   left: 10px;
@@ -45,7 +55,7 @@ body {
   transition: transform 0.2s, color 0.2s, font-weight 0.2s, font-size 0.2s;
 }
 
-.formContainer .inputContainer input:focus ~ label {
+.formContainer .inputContainer label.focused {
   font-size: 0.8rem;
   font-weight: 400;
   color: gray;
@@ -72,6 +82,7 @@ body {
     justify-content: center;
     align-items: center;
     height: fit-content;
+    width: fit-content;
   }
 
   .formContainer .inputContainer input {
@@ -81,19 +92,33 @@ body {
     width: 60vw;
   }
 
+  .formContainer .inputContainer label {
+    top: 10%;
+  }
+
+  .formContainer .inputContainer .error {
+    position: relative;
+    bottom: initial;
+    left: initial;
+    width: 100%;
+    text-align: left;
+    padding-left: 0.8em;
+    margin-bottom: 0.5em;
+  }
+
   .formContainer .inputContainer button {
     border-radius: 0.3em;
     height: 10vh;
     width: 30vw;
   }
-
-  .formContainer .inputContainer label {
-    top: 13%;
-  }
 }
 
 @media (max-width: 480px) {
   .formContainer .inputContainer input {
+    font-size: 0.8rem;
+  }
+
+  .formContainer .inputContainer .error {
     font-size: 0.8rem;
   }
 
@@ -109,7 +134,7 @@ body {
     font-size: 0.8rem;
   }
 
-  .formContainer .inputContainer input:focus ~ label {
+  .formContainer .inputContainer label.focused {
     font-size: 0.6rem;
   }
 }
@@ -120,7 +145,7 @@ body {
 
 #header {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   border-bottom: #222222 8px solid;
@@ -179,7 +204,7 @@ body {
 }
 
 #header > div {
-  height: 100%;
+  min-height: 85vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -801,7 +826,13 @@ body {
   color: crimson;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 980px) {
+  #footer nav ul {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
   #footer nav ul {
     grid-template-columns: 1fr 1fr;
   }
