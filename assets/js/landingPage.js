@@ -3,6 +3,8 @@
 const faqContainer = document.querySelectorAll(".faqContainer");
 const topEmailInput = document.getElementById("topEmail");
 const bottomEmailInput = document.getElementById("bottomEmail");
+const topForm = document.getElementById("topForm");
+const bottomForm = document.getElementById("bottomForm");
 
 // Functions
 function toggleAccordion() {
@@ -26,26 +28,36 @@ function toggleAccordion() {
   thisSign.innerHTML = "&#215;";
 }
 
-function validateEmail(email) {
-  const emailReg =
-    /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+class Register {
+  errorArray = [];
 
-  if (!email.nextElementSibling.classList.contains("error")) {
-    const errorP = document.createElement("p");
-    errorP.classList.add("error");
-    email.insertAdjacentElement("afterend", errorP);
-  }
+  validateEmail(email) {
+    const emailReg =
+      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
-  if (email.value === "" || email.value === null) {
-    email.nextElementSibling.textContent = "Email is required";
-    return;
-  }
+    if (!email.nextElementSibling.classList.contains("error")) {
+      this.errorArray = [];
+      const errorP = document.createElement("p");
+      errorP.classList.add("error");
+      email.insertAdjacentElement("afterend", errorP);
+    }
 
-  if (!emailReg.test(email)) {
-    email.nextElementSibling.textContent = "Your Email is Invalid";
-    return;
+    if (email.value === "" || email.value === null) {
+      this.errorArray = [];
+      email.nextElementSibling.textContent = "Email is required";
+      this.errorArray.push("Email is required");
+      return;
+    }
+
+    if (!emailReg.test(email)) {
+      email.nextElementSibling.textContent = "Your Email is Invalid";
+      this.errorArray.push("Your Email is Invalid");
+      return;
+    }
   }
 }
+
+const regObj = new Register();
 
 //Event Listeners
 faqContainer.forEach((faq) => {
@@ -66,7 +78,7 @@ topEmailInput.addEventListener("focusin", function () {
 topEmailInput.addEventListener("focusout", function () {
   const label = this.querySelector("#topEmail ~ label");
 
-  validateEmail(topEmailInput);
+  regObj.validateEmail(topEmailInput);
   if (topEmailInput.value === "" || topEmailInput.value === "") {
     label.classList.remove("focused");
   }
@@ -86,7 +98,7 @@ bottomEmailInput.addEventListener("focusin", function () {
 bottomEmailInput.addEventListener("focusout", function () {
   const label = this.querySelector("#bottomEmail ~ label");
 
-  validateEmail(bottomEmailInput);
+  regObj.validateEmail(bottomEmailInput);
   if (bottomEmailInput.value === "" || bottomEmailInput.value === "") {
     label.classList.remove("focused");
   }
